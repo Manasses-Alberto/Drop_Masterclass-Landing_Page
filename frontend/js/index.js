@@ -1,3 +1,5 @@
+let whatsappChatBtn = document.querySelector('button#whatsapp-chat')
+
 document.getElementById('menu-controller-btn').onclick = function () {
     const bars = document.getElementsByClassName('bar')
     for (let x = 0; x <= 2; x++) { bars[x].classList.toggle('close') }
@@ -20,3 +22,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     typeWriter(text, 0, function() { /* Typed */ })
 });
+
+window.onscroll = function () {
+    if (window.scrollY >= 250) {
+        if (whatsappChatBtn.classList.contains('closed') === true) {
+            whatsappChatBtn.classList.replace('closed', 'opened')
+        }
+    } else {
+        if (whatsappChatBtn.classList.contains('opened') === true) {
+            whatsappChatBtn.classList.replace('opened', 'closed')
+        }
+    }
+}
