@@ -1,4 +1,5 @@
 let whatsappChatBtn = document.querySelector('button#whatsapp-chat')
+let CTAs = document.querySelectorAll('button.CTA')
 
 document.getElementById('menu-controller-btn').onclick = function () {
     const bars = document.getElementsByClassName('bar')
@@ -33,4 +34,12 @@ window.onscroll = function () {
             whatsappChatBtn.classList.replace('opened', 'closed')
         }
     }
+}
+
+for (let c = 0; c <= 4; c++) {
+    CTAs[c].addEventListener('click', function () {
+        setTimeout(function () {
+            location.href = 'checkout.html'
+        }, 3000)
+    })
 }
