@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'Advent Pro';
+    src: url('../fonts/AdventPro-VariableFont_wdth\,wght.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins Regular';
+    src: url('../fonts/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins Medium';
+    src: url('../fonts/Poppins-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins Bold';
+    src: url('../fonts/Poppins-Bold.ttf');
+}
+
+:root {
+    --color-a: #1b1b4d;
+    --color-b: #a94bdb;
+    --color-c: #7a4bdb;
+    --color-d: #524d5c;
+    --color-e: #ffffffe0;
+    --advent-pro: 'Advent Pro', sans-serif;
+    --poppins-r: 'Poppins Regular', sans-serif;
+    --poppins-m: 'Poppins Medium', sans-serif;
+    --poppins-b: 'Poppins Bold', sans-serif;
+}
+
+body { background-color: var(--color-a); }
+
+main { height: 90vh; }
+
+h1 {
+    font-family: var(--advent-pro);
+    color: var(--color-b);
+    font-size: 2.2em;
+}
+
+main > p {
+    color: var(--color-e);
+    font-family: var(--poppins-m);
+    font-size: 1.2em;
+}
+
+button {
+    padding: 0.4rem 1rem;
+    border: 2px solid var(--color-b);
+    background-color: var(--color-b);
+    border-radius: 1rem;
+    color: var(--color-e);
+    font-family: var(--poppins-b);
+    box-shadow: 0 0 100px var(--color-b);
+    z-index: 0;
+    transition: all 0.5s linear;
+}
+
+button:focus,
+button:hover,
+button:active {
+    box-shadow: 0 0 20px var(--color-b);
+    background-color: transparent;
+    text-shadow: 0 0 10px var(--color-e);
+    border-width: 4px;
+}
+
+button > i {
+    font-size: 1.4em;
+    margin-right: 5px;
+}
+
+button > span { font-size: 1.2em; }
+
+footer { background-color: var(--color-c); }
+
+footer > p {
+    text-align: center;
+    color: var(--color-e);
+    font-family: var(--poppins-m);
+}
