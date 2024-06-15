@@ -32,6 +32,17 @@
 
 body { background-color: var(--color-a); }
 
+::-webkit-scrollbar { width: 0.6rem; }
+
+::-webkit-scrollbar-track { background-color: var(--color-d); }
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-b);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover { background-color: #a94bdba0; }
+
 main { height: 90vh; }
 
 h1 {
@@ -47,6 +58,7 @@ main > p {
 }
 
 button {
+    width: 100%;
     padding: 0.4rem 1rem;
     border: 2px solid var(--color-b);
     background-color: var(--color-b);
@@ -80,4 +92,21 @@ footer > p {
     text-align: center;
     color: var(--color-e);
     font-family: var(--poppins-m);
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    h1 { font-size: 2.8em; }
+
+    main > p {
+        font-size: 1.7em;
+        width: 90%;
+    }
+
+    button { width: 60%; }
+
+    button > i { font-size: 1.8em; }
+
+    button > span { font-size: 1.6em; }
+
+    footer > p { font-size: 1.4em; }
 }

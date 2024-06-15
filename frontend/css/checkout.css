@@ -32,6 +32,19 @@
 
 body { background-color: var(--color-a); }
 
+::-webkit-scrollbar { width: 0.6rem; }
+
+::-webkit-scrollbar-track { background-color: var(--color-d); }
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-b);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover { background-color: #a94bdba0; }
+
+header { padding: 1rem; }
+
 #legend > h1 {
     font-family: var(--advent-pro);
     color: var(--color-b);
@@ -148,4 +161,35 @@ footer > p {
     text-align: center;
     color: var(--color-e);
     font-family: var(--poppins-m);
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    header { padding: 1rem 2rem; }
+
+    #legend > h1 { font-size: 2.5em; }
+
+    #legend > p { font-size: 1.5em; }
+
+    header > p { font-size: 6em; }
+
+    main {
+        padding: 1rem 2rem;
+        height: 80vh;
+    }
+
+    label { font-size: 1.6em; }
+
+    .input-group > button { font-size: 1.8em; }
+
+    .form-control, .form-select { font-size: 1.4em; }
+
+    .field-group > p { font-size: 1.8em; }
+
+    #action-area > button > i { font-size: 1.8em; }
+
+    #action-area > button > span { font-size: 1.6em; }
+
+    main > p { font-size: 1.4em; }
+
+    footer > p { font-size: 1.4em; }
 }
