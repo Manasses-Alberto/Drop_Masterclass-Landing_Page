@@ -5,14 +5,21 @@ var expirationMonth = document.querySelector('select#month-field')
 var expirationYear = document.querySelector('input#year-field')
 var securityCode = document.querySelector('input#security-code-field')
 var actualYear = new Date().getFullYear()
+var actualMonth = new Date().getMonth()
 
 function checkFormFields() {
     if (/\d/.test(clientName.value) || /^[a-zA-Z\s]+$/.test(clientName.value) !== true) {
-        return {'error': true, 'field': 'name-field'}
+        return {'error': true, 'field': clientName}
     } else if (expirationYear.value.length !== 4 || Number.parseInt(expirationYear) < actualYear) {
-        return {'error': true, 'field': 'year-field'}
+        return {'error': true, 'field': expirationYear}
     } else if (/\D/.test(securityCode.value) !== false || securityCode.value.length !== 16) {
-        return {'error': true, 'field': 'security-code-field'}
+        return {'error': true, 'field': securityCode}
+    } else if (Number.parseInt(expirationYear.value) < actualYear) {
+        return {'error': true, 'field': expirationYear}
+    } else if (Number.parseInt(expirationYear.value) === actualYear) {
+        if (Number.parseInt(expirationMonth.value) < actualMonth) {
+            return {'error': true, 'field': expirationMonth}
+        }
     }
 
     return {'error': false}
@@ -43,6 +50,6 @@ checkoutForm.addEventListener('submit', function (event) {
             securityCode.classList.remove('is-invalid')
         } catch { /* It ran without errors */ }
 
-        document.querySelector(`input#${formCheck['field']}`).classList.add('is-invalid')
+        formCheck['field'].classList.add('is-invalid')
     }
 })

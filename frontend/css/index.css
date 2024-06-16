@@ -444,8 +444,6 @@ footer > p {
 
     nav#main-nav > a { font-size: 1.5em; }
 
-    #intro-area { height: 50vh !important; }
-
     div#intro-overlay {
         align-items: start !important;
         padding: 2rem !important;

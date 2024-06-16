@@ -172,10 +172,7 @@ footer > p {
 
     header > p { font-size: 6em; }
 
-    main {
-        padding: 1rem 2rem;
-        height: 80vh;
-    }
+    main { padding: 1rem 2rem; }
 
     label { font-size: 1.6em; }
 
