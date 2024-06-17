@@ -74,16 +74,13 @@ section.close#bar3 { transform: translateY(-6px) rotate(45deg); }
 section.close#bar2 { opacity: 0; }
 
 span#logo-legend {
-    font-family: var(--advent-pro);
-    font-size: 1.5em;
+    font: italic bold 1.5em var(--advent-pro);
     text-transform: capitalize;
     color: var(--color-e);
     white-space: nowrap;
 }
 
 nav#main-nav { transition: all 1s linear; }
-
-nav#main-nav.closed { display: none !important; }
 
 @keyframes text-height-flow {
     from { line-height: 0em; }
@@ -112,9 +109,7 @@ div#intro-area { height: 80vh; }
 div#intro-overlay { height: 60%; }
 
 div#intro-overlay > h1 {
-    font-family: var(--advent-pro);
-    font-weight: bold;
-    font-size: 2.2em;
+    font: bold 2.2em var(--advent-pro);
     color: var(--color-e);
     text-transform: uppercase;
 }
@@ -128,9 +123,8 @@ div#intro-overlay > h1 {
 }
 
 div#intro-overlay > p {
-    font-family: var(--poppins-m);
     color: var(--color-c);
-    font-size: 1.2em;
+    font: 1.2em var(--poppins-m);
     animation: description-appear 0.7s ease-in-out;
 }
 
@@ -203,10 +197,8 @@ button.CTA > span { font-size: 1.2em; }
 }
 
 #valuation-overlay {
-    background-image: url('../images/filosofia.jpg');
+    background: url('../images/filosofia.jpg') no-repeat center fixed;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     animation: bg-moving 5s linear infinite alternate;
 }
 
@@ -214,9 +206,7 @@ button.CTA > span { font-size: 1.2em; }
 
 #valuation-container > p {
     color: var(--color-e);
-    font-family: var(--poppins-m);
-    font-style: italic;
-    font-size: 1.1em;
+    font: italic 1.1em var(--poppins-m);
 }
 
 @keyframes ytrans {
@@ -228,8 +218,7 @@ button.CTA > span { font-size: 1.2em; }
 }
 
 .module > h3 > span:first-child {
-    font-family: var(--poppins-b);
-    font-size: 2em;
+    font: 2em var(--poppins-b);
     color: var(--color-c);
     animation: ytrans 0.8s ease-in;
     animation-timeline: view();
@@ -245,9 +234,8 @@ button.CTA > span { font-size: 1.2em; }
 }
 
 .module > h3 > span:last-child {
-    font-family: var(--poppins-r);
     color: var(--color-b);
-    font-size: 0.9em;
+    font: 0.9em var(--poppins-r);
     animation: lt-space-move 0.8s ease-in;
     animation-timeline: view();
     animation-range: cover 0% cover 30%;
@@ -284,6 +272,7 @@ button.CTA > span { font-size: 1.2em; }
     border-radius: 1.5rem;
     margin: 3rem 1rem;
     box-shadow: 0 0 30px var(--color-d);
+    height: 25rem;
     animation: card-scale-moving 0.8s ease-in;
     animation-timeline: view();
     animation-range: cover 0% cover 30%;
@@ -295,9 +284,7 @@ button.CTA > span { font-size: 1.2em; }
 }
 
 .bonus > h3 {
-    font-family: var(--advent-pro);
-    font-size: 1.8em;
-    font-weight: bold;
+    font: bold 1.8em var(--advent-pro);
     color: var(--color-b);
 }
 
@@ -333,16 +320,14 @@ button.CTA > span { font-size: 1.2em; }
 }
 
 .testmony-card > header > h5 {
-    font-family: var(--poppins-b);
-    font-size: 1.1em;
+    font: 1.1em var(--poppins-b);
     color: var(--color-a);
     margin-bottom: 0px;
 }
 
 .testmony-body {
     color: var(--color-e);
-    font-family: var(--poppins-r);
-    font-style: italic;
+    font: italic var(--poppins-r);
 }
 
 #FAQ { padding: 2rem 0rem 4rem 0rem; }
@@ -383,15 +368,13 @@ button.CTA > span { font-size: 1.2em; }
     background-image: none !important;
     content: '\F282';
     color: var(--color-e);
-    font-size: 1.3em;
-    font-family: bootstrap-icons !important;
+    font: 1.3em bootstrap-icons !important;
 }
 
 .accordion-body {
-    font-family: var(--poppins-r);
     color: var(--color-c);
-    font-style: italic;
     border-top: none !important;
+    font: italic var(--poppins-r);
 }
 
 #whatsapp-chat {
@@ -430,6 +413,7 @@ footer > p {
     font-family: var(--poppins-m);
 }
 
+/* Tablet version */
 @media screen and (min-width: 768px) and (max-width: 992px) {
     section#bar1 { transform: translateY(-6px); }
 
@@ -447,6 +431,8 @@ footer > p {
     div#intro-overlay {
         align-items: start !important;
         padding: 2rem !important;
+        justify-content: space-evenly !important;
+        height: 100%;
     }
 
     div#intro-overlay > h1 {
@@ -514,7 +500,11 @@ footer > p {
 
     #product-details button { width: 60%; }
 
-    .bonus { margin: 2rem 1rem; }
+    .bonus {
+        margin: 2rem 1rem;
+        width: auto;
+        height: auto;
+    }
 
     .bonus > h3 { font-size: 2.6em; }
 
@@ -556,4 +546,284 @@ footer > p {
     #whatsapp-chat > span:last-child { font-size: 1.5em; }
 
     footer > p { font-size: 1.4em; }
+}
+
+/* Notebook version */
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    #main-header {
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-around;
+    }
+
+    #logo-legend { cursor: pointer; }
+
+    #logo-legend::selection { color: var(--color-b) !important; }
+
+    #main-nav {
+        display: flex !important;
+        flex-direction: row !important;
+        width: auto !important;
+    }
+
+    #main-nav > a::selection { background-color: var(--color-b); }
+
+    div#intro-overlay {
+        height: 100%;
+        justify-content: space-evenly !important;
+        align-items: start !important;
+        padding: 2rem !important;
+    }
+
+    div#intro-overlay > h1 {
+        font-size: 2.8em;
+        text-align: left !important;
+    }
+
+    div#intro-overlay > h1::selection { background-color: var(--color-b); }
+
+    div#intro-overlay > p {
+        width: 70% !important;
+        text-align: left !important;
+        font-size: 1.5em;
+    }
+
+    div#intro-overlay > p::selection,
+    div#intro-overlay > p > span::selection { background-color: var(--color-d); }
+
+    div#intro-overlay > a { text-align: left !important; }
+
+    #intro-overlay > a > button { width: 40% !important; }
+
+    button.CTA { width: 30% !important; }
+
+    button.CTA > i { font-size: 1.6em; }
+
+    button.CTA > span { font-size: 1.4em; }
+
+    button.CTA::selection,
+    button.CTA > span::selection { background-color: var(--color-c); }
+
+    .title { font-size: 2.5em; }
+
+    .title::selection { background-color: var(--color-b); }
+
+    #valuation-overlay {
+        animation: none;
+        background-position: center;
+    }
+
+    #valuation-container > p {
+        width: 50%;
+        word-spacing: 3px;
+    }
+
+    #valuation-container > p::selection,
+    .module > p::selection,
+    .bonus > p::selection { background-color: var(--color-c); }
+
+    .module > h3 { text-align: center; }
+
+    @keyframes lt-space-move-md {
+        0% {
+            letter-spacing: 1.5rem;
+            opacity: 0.1;
+        }
+
+        50% {
+            letter-spacing: 0.5rem;
+            opacity: 0.5;
+        }
+
+        100% {
+            letter-spacing: 0rem;
+            opacity: 1;
+        }
+    }
+
+    .module > h3 > span:first-child {
+        animation: lt-space-move-md 0.8s ease-in;
+        animation-timeline: view();
+        animation-range: cover 0% cover 30%;
+    }
+
+    .module > h3 > span::selection { background-color: var(--color-d); }
+
+    .module > p {
+        font-size: 1.3em;
+        width: 70%;
+        text-align: center;
+        animation: lt-space-move-md 0.8s ease-in;
+        animation-timeline: view();
+        animation-range: cover 0% cover 30%;
+    }
+
+    .bonus { height: 22rem; }
+
+    .bonus > h3::selection { background-color: var(--color-a); }
+
+    #testmonies-carousel { width: 70%; }
+
+    header > h5::selection { background-color: var(--color-c); }
+
+    header > img::selection { background-color: var(--color-d); }
+
+    .testmony-body::selection { background-color: var(--color-c); }
+
+    #FAQ-accordion { width: 80%; }
+
+    .accordion-button::selection { background-color: var(--color-b); }
+
+    .accordion-body {
+        width: 80%;
+        font-style: normal;
+    }
+
+    .accordion-body::selection { background-color: var(--color-a); }
+
+    #whatsapp-chat > span:last-child::selection { background-color: var(--color-d); }
+
+    footer > p > span::selection,
+    footer > p > span > strong::selection { background-color: var(--color-b) !important; }
+}
+
+/* TV Version */
+@media screen and (min-width: 1200px) {
+    #main-header {
+        flex-direction: row !important;
+        align-items: center !important;
+    }
+
+    #logo-legend { cursor: pointer; }
+
+    #logo-legend::selection { color: var(--color-b) !important; }
+
+    #main-nav {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center;
+    }
+
+    #main-nav > a::selection { background-color: var(--color-b); }
+
+    div#intro-overlay {
+        height: 100%;
+        justify-content: space-evenly !important;
+        align-items: start !important;
+        padding: 2rem !important;
+    }
+
+    div#intro-overlay > h1 {
+        font-size: 2.8em;
+        text-align: left !important;
+    }
+
+    div#intro-overlay > h1::selection { background-color: var(--color-b); }
+
+    div#intro-overlay > p {
+        width: 60% !important;
+        text-align: left !important;
+        font-size: 1.5em;
+    }
+
+    div#intro-overlay > p::selection,
+    div#intro-overlay > p > span::selection { background-color: var(--color-d); }
+
+    div#intro-overlay > a { text-align: left !important; }
+
+    #intro-overlay > a > button { width: 40% !important; }
+
+    button.CTA { width: 30% !important; }
+
+    button.CTA > i { font-size: 1.6em; }
+
+    button.CTA > span { font-size: 1.4em; }
+
+    button.CTA::selection,
+    button.CTA > span::selection { background-color: var(--color-c); }
+
+    .title { font-size: 2.5em; }
+
+    .title::selection { background-color: var(--color-b); }
+
+    #valuation-overlay {
+        animation: none;
+        background-position: center;
+    }
+
+    #valuation-container > p {
+        width: 50%;
+        word-spacing: 3px;
+    }
+
+    #valuation-container > p::selection,
+    .module > p::selection,
+    .bonus > p::selection { background-color: var(--color-c); }
+
+    .module > h3 { text-align: center; }
+
+    @keyframes lt-space-move-md {
+        0% {
+            letter-spacing: 1.5rem;
+            opacity: 0.1;
+        }
+
+        50% {
+            letter-spacing: 0.5rem;
+            opacity: 0.5;
+        }
+
+        100% {
+            letter-spacing: 0rem;
+            opacity: 1;
+        }
+    }
+
+    .module > h3 > span:first-child {
+        animation: lt-space-move-md 0.8s ease-in;
+        animation-timeline: view();
+        animation-range: cover 0% cover 30%;
+    }
+
+    .module > h3 > span::selection { background-color: var(--color-d); }
+
+    .module > p {
+        font-size: 1.3em;
+        width: 70%;
+        text-align: center;
+        animation: lt-space-move-md 0.8s ease-in;
+        animation-timeline: view();
+        animation-range: cover 0% cover 30%;
+    }
+
+    .bonus {
+        width: 25rem;
+        height: 22rem;
+    }
+
+    .bonus > h3::selection { background-color: var(--color-a); }
+
+    #testmonies-carousel { width: 70%; }
+
+    header > h5::selection { background-color: var(--color-c); }
+
+    header > img::selection { background-color: var(--color-d); }
+
+    .testmony-body::selection { background-color: var(--color-c); }
+
+    #FAQ-accordion { width: 80%; }
+
+    .accordion-button::selection { background-color: var(--color-b); }
+
+    .accordion-body {
+        width: 80%;
+        font-style: normal;
+    }
+
+    .accordion-body::selection { background-color: var(--color-a); }
+
+    #whatsapp-chat > span:last-child::selection { background-color: var(--color-d); }
+
+    footer > p > span::selection,
+    footer > p > span > strong::selection { background-color: var(--color-b) !important; }
 }

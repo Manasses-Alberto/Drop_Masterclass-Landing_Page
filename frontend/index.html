@@ -11,14 +11,14 @@
 <body>
     <header id="main-header" class="w-100 position-fixed top-0 d-flex flex-column align-items-start justify-content-left closed-menu">
         <div class="header-main-area p-2 d-flex align-items-center justify-content-center gap-2">
-            <button type="button" id="menu-controller-btn">
+            <button type="button" id="menu-controller-btn" class="d-lg-none">
                 <section id="bar1" class="bar d-block"></section>
                 <section id="bar2" class="bar d-block"></section>
                 <section id="bar3" class="bar d-block"></section>
             </button>
             <span id="logo-legend">Drop Masterclass</span>
         </div>
-        <nav id="main-nav" class="closed w-100 p-4 d-flex flex-column align-items-start justify-content-left gap-3">
+        <nav id="main-nav" class="w-100 p-4 p-lg-2 d-none flex-column align-items-start justify-content-left gap-3">
             <a href="checkout.html">Get training</a>
             <a href="#product-bonus">Bonus</a>
             <a href="#product-testmonies">Testimonies</a>
@@ -95,21 +95,21 @@
         </div>
         <div id="product-bonus" class="mb-4">
             <h2 class="text-center title">Bónus</h2>
-            <div id="bonus-area">
-                <div class="bonus p-3 d-md-flex flex-md-column align-items-center">
+            <div id="bonus-area" class="d-lg-flex align-items-start justify-content-around">
+                <div class="bonus p-3 d-flex flex-column align-items-center justify-content-between">
                     <p><i class="bi bi-people-fill"></i></p>
                     <h3>Comunidade exclusiva</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repudiandae voluptates recusandae excepturi, ducimus eligendi earum, dicta voluptate explicabo iste provident sed quisquam laboriosam nostrum velit, saepe architecto impedit dolores!</p>
+                    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repudiandae voluptates recusandae excepturi, ducimus eligendi earum, dicta voluptate explicabo iste provident sed quisquam laboriosam nostrum velit, saepe architecto impedit dolores!</p>
                 </div>
-                <div class="bonus p-3 d-md-flex flex-md-column align-items-center">
+                <div class="bonus p-3 d-flex flex-column align-items-center justify-content-between">
                     <p><i class="bi bi-box2-heart-fill"></i></p>
                     <h3>Materiais extra</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repudiandae voluptates recusandae excepturi, ducimus eligendi earum, dicta voluptate explicabo iste provident sed quisquam laboriosam nostrum velit, saepe architecto impedit dolores!</p>
+                    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repudiandae voluptates recusandae excepturi, ducimus eligendi earum, dicta voluptate explicabo iste provident sed quisquam laboriosam nostrum velit, saepe architecto impedit dolores!</p>
                 </div>
-                <div class="bonus p-3 d-md-flex flex-md-column align-items-center">
+                <div class="bonus p-3 d-flex flex-column align-items-center justify-content-between">
                     <p><i class="bi bi-coin"></i></p>
                     <h3>Ivestimento em tráfego</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repudiandae voluptates recusandae excepturi, ducimus eligendi earum, dicta voluptate explicabo iste provident sed quisquam laboriosam nostrum velit, saepe architecto impedit dolores!</p>
+                    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repudiandae voluptates recusandae excepturi, ducimus eligendi earum, dicta voluptate explicabo iste provident sed quisquam laboriosam nostrum velit, saepe architecto impedit dolores!</p>
                 </div>
             </div>
             <div class="action-area px-3 d-flex justify-content-center">
@@ -121,7 +121,7 @@
                 </a>
             </div>
         </div>
-        <div id="product-testmonies">
+        <div id="product-testmonies" class="d-lg-flex flex-column align-items-center">
             <h2 class="title text-center">Depoimentos</h2>
             <div id="testmonies-carousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
@@ -160,7 +160,7 @@
                 </div>
             </div>
         </div>
-        <div id="FAQ">
+        <div id="FAQ" class="d-lg-flex flex-column align-items-center">
             <h2 class="title text-center">Frequently questions</h2>
             <div class="accordion" id="FAQ-accordion">
                 <div class="accordion-item">

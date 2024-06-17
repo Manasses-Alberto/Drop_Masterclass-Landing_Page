@@ -46,15 +46,13 @@ body { background-color: var(--color-a); }
 header { padding: 1rem; }
 
 #legend > h1 {
-    font-family: var(--advent-pro);
     color: var(--color-b);
-    font-size: 2em;
+    font: italic bold 2em var(--advent-pro);
 }
 
 #legend > p {
     color: var(--color-e);
-    font-family: var(--poppins-r);
-    font-size: 1.1em;
+    font: 1.1em var(--poppins-r);
 }
 
 header > p {
@@ -64,9 +62,8 @@ header > p {
 }
 
 label {
-    font-family: var(--poppins-m);
     color: var(--color-c);
-    font-size: 1.2em;
+    font: 1.2em var(--poppins-m);
 }
 
 .form-control,
@@ -105,15 +102,11 @@ label {
     color: var(--color-b);
 }
 
-.invalid-feedback {
-    font-family: var(--poppins-r);
-    font-size: 0.9em;
-}
+.invalid-feedback { font: 0.9em var(--poppins-r); }
 
 .field-group > p {
     color: var(--color-b);
-    font-size: 1.4em;
-    font-family: var(--poppins-r);
+    font: 1.4em var(--poppins-r);
 }
 
 #action-area > button {
@@ -145,9 +138,8 @@ label {
 #action-area > button > span { font-size: 1.2em; }
 
 main > p {
-    font-family: var(--poppins-r);
     color: var(--color-c);
-    font-style: italic;
+    font: italic var(--poppins-r); 
 }
 
 main > p > a {
@@ -163,6 +155,7 @@ footer > p {
     font-family: var(--poppins-m);
 }
 
+/* Tablet version */
 @media screen and (min-width: 768px) and (max-width: 992px) {
     header { padding: 1rem 2rem; }
 
@@ -189,4 +182,129 @@ footer > p {
     main > p { font-size: 1.4em; }
 
     footer > p { font-size: 1.4em; }
+}
+
+/* Notebook version */
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    header {
+        padding: 1rem 2rem;
+        margin: 0rem auto;
+        width: 80%;
+    }
+
+    #legend > h1 { font-size: 2.3em; }
+
+    #legend > h1::selection { background-color: var(--color-d); }
+
+    #legend > p { font-size: 1.3em; }
+
+    #legend > p::selection,
+    #legend > p > strong::selection { background-color: var(--color-c); }
+
+    header > p { font-size: 6em; }
+
+    main {
+        padding: 1rem 2rem;
+        margin: 0rem auto;
+        width: 80%;
+    }
+
+    label {
+        font-size: 1.3em;
+        cursor: pointer;
+    }
+
+    label::selection { background-color: var(--color-e); }
+
+    .input-group > button { font-size: 1.8em; }
+
+    .form-control, .form-select { font-size: 1.2em; }
+
+    .form-control::selection, .form-select::selection { background-color: var(--color-b); }
+
+    .field-group > p { font-size: 1.8em; }
+
+    .field-group > p::selection { background-color: var(--color-e); }
+
+    #action-area > button > i { font-size: 1.6em; }
+
+    #action-area > button > span { font-size: 1.4em; }
+
+    #action-area > button::selection,
+    #action-area > button > span::selection { background-color: var(--color-c); }
+
+    main > p {
+        font-size: 1.3em;
+        width: 80%;
+    }
+
+    main > p > a { cursor: pointer; }
+
+    main > p::selection,
+    main > p > a::selection { background-color: var(--color-d); }
+
+    footer > p > span::selection,
+    footer > p > span > strong::selection { background-color: var(--color-b) !important; }
+}
+
+@media screen and (min-width: 1200px) {
+    header {
+        padding: 1rem 2rem;
+        margin: 0rem auto;
+        width: 50%;
+    }
+
+    #legend > h1 { font-size: 2.3em; }
+
+    #legend > h1::selection { background-color: var(--color-d); }
+
+    #legend > p { font-size: 1.3em; }
+
+    #legend > p::selection,
+    #legend > p > strong::selection { background-color: var(--color-c); }
+
+    header > p { font-size: 6em; }
+
+    main {
+        padding: 1rem 2rem;
+        margin: 0rem auto;
+        width: 50%;
+    }
+
+    label {
+        font-size: 1.3em;
+        cursor: pointer;
+    }
+
+    label::selection { background-color: var(--color-e); }
+
+    .input-group > button { font-size: 1.8em; }
+
+    .form-control, .form-select { font-size: 1.2em; }
+
+    .form-control::selection, .form-select::selection { background-color: var(--color-b); }
+
+    .field-group > p { font-size: 1.8em; }
+
+    .field-group > p::selection { background-color: var(--color-e); }
+
+    #action-area > button > i { font-size: 1.6em; }
+
+    #action-area > button > span { font-size: 1.4em; }
+
+    #action-area > button::selection,
+    #action-area > button > span::selection { background-color: var(--color-c); }
+
+    main > p {
+        font-size: 1.3em;
+        width: 80%;
+    }
+
+    main > p > a { cursor: pointer; }
+
+    main > p::selection,
+    main > p > a::selection { background-color: var(--color-d); }
+
+    footer > p > span::selection,
+    footer > p > span > strong::selection { background-color: var(--color-b) !important; }
 }

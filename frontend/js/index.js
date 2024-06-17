@@ -1,10 +1,15 @@
 let whatsappChatBtn = document.querySelector('button#whatsapp-chat')
 let CTAs = document.querySelectorAll('button.CTA')
+let mainNav = document.getElementById('main-nav')
 
 document.getElementById('menu-controller-btn').onclick = function () {
     const bars = document.getElementsByClassName('bar')
     for (let x = 0; x <= 2; x++) { bars[x].classList.toggle('close') }
-    document.getElementById('main-nav').classList.toggle('closed')
+    if (mainNav.classList.contains('d-none') === true) {
+        mainNav.classList.replace('d-none', 'd-flex')
+    } else {
+        mainNav.classList.replace('d-flex', 'd-none')
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -12,17 +17,17 @@ document.addEventListener('DOMContentLoaded', function() {
     var text = ptyping.getAttribute('data-text')
     function typeWriter(text, i, cb) {
         if (i < text.length) {
-            ptyping.textContent += text.charAt(i);
+            ptyping.textContent += text.charAt(i)
             setTimeout(function() {
-                typeWriter(text, i + 1, cb);
-            }, 40);
+                typeWriter(text, i + 1, cb)
+            }, 40)
         } else {
-            cb();
+            cb()
         }
     }
 
     typeWriter(text, 0, function() { /* Typed */ })
-});
+})
 
 window.onscroll = function () {
     if (window.scrollY >= 250) {

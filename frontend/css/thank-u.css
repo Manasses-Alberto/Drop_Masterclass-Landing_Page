@@ -94,6 +94,7 @@ footer > p {
     font-family: var(--poppins-m);
 }
 
+/* Tablet version */
 @media screen and (min-width: 768px) and (max-width: 992px) {
     h1 { font-size: 2.8em; }
 
@@ -109,4 +110,63 @@ footer > p {
     button > span { font-size: 1.6em; }
 
     footer > p { font-size: 1.4em; }
+}
+
+/* Notebook version */
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    h1 { font-size: 2.8em; }
+
+    h1::selection,
+    h1 > span::selection,
+    h1 > strong::selection { background-color: var(--color-e); }
+
+    main > p {
+        font-size: 1.7em;
+        width: 90%;
+    }
+
+    main > p::selection,
+    main > p > strong::selection { background-color: var(--color-d); }
+
+    button { width: 60%; }
+
+    button > i { font-size: 1.8em; }
+
+    button > span { font-size: 1.6em; }
+
+    button::selection,
+    button > span::selection { background-color: var(--color-c); }
+
+    footer > p > span::selection,
+    footer > p > span > strong::selection { background-color: var(--color-b) !important; }
+}
+
+@media screen and (min-width: 1200px) {
+    h1 { font-size: 2.8em; }
+
+    h1::selection,
+    h1 > span::selection,
+    h1 > strong::selection { background-color: var(--color-e); }
+
+    main { gap: 2rem; }
+
+    main > p {
+        font-size: 1.7em;
+        width: 60%;
+    }
+
+    main > p::selection,
+    main > p > strong::selection { background-color: var(--color-d); }
+
+    button { width: 40%; }
+
+    button > i { font-size: 1.8em; }
+
+    button > span { font-size: 1.6em; }
+
+    button::selection,
+    button > span::selection { background-color: var(--color-c); }
+
+    footer > p > span::selection,
+    footer > p > span > strong::selection { background-color: var(--color-b) !important; }
 }
