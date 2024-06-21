@@ -1,13 +1,14 @@
 from app import app
+from flask import render_template
 
 @app.route('/')
 def home():
-    return '<h1>Esta é a minha landing page</h1>'
+    return render_template('index.html')
 
 @app.route('/checkout/')
 def checkout():
-    return '<h1>Esta é a página de checkout</h1>'
+    return render_template('checkout.html')
 
 @app.route('/thanks/<client_name>/')
 def thanks(client_name):
-    return f'<h1>Obrigado {client_name}!</h1>'
+    return render_template('thanks.html', client=client_name)

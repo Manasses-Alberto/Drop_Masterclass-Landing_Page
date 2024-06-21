@@ -1,0 +1,851 @@
+@font-face {
+    font-family: 'Advent Pro';
+    src: url('../fonts/AdventPro-VariableFont_wdth\,wght.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins Regular';
+    src: url('../fonts/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins Medium';
+    src: url('../fonts/Poppins-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins Bold';
+    src: url('../fonts/Poppins-Bold.ttf');
+}
+
+:root {
+    --color-a: #1b1b4d;
+    --color-b: #a94bdb;
+    --color-c: #7a4bdb;
+    --color-d: #524d5c;
+    --color-e: #ffffffe0;
+    --advent-pro: 'Advent Pro', sans-serif;
+    --poppins-r: 'Poppins Regular', sans-serif;
+    --poppins-m: 'Poppins Medium', sans-serif;
+    --poppins-b: 'Poppins Bold', sans-serif;
+}
+
+::-webkit-scrollbar { width: 0.6rem; }
+
+::-webkit-scrollbar-track { background-color: var(--color-d); }
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-b);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover { background-color: #a94bdba0; }
+
+div#header-main-area { z-index: 1; }
+
+header#main-header {
+    left: 0rem;
+    background-color: var(--color-c);
+    box-shadow: 0 0 10px var(--color-a);
+    z-index: 2;
+}
+
+button#menu-controller-btn {
+    background-color: transparent;
+    border: none;
+}
+
+section.bar {
+    height: 4px;
+    width: 30px;
+    background-color: var(--color-e);
+    border-radius: 0px;
+    transition: all 0.3s ease;
+}
+
+section#bar1 { transform: translateY(-4px); }
+
+section#bar3 { transform: translateY(4px); }
+
+section.close#bar1 { transform: translateY(4px) rotateZ(-45deg); }
+
+section.close#bar3 { transform: translateY(-6px) rotate(45deg); }
+
+section.close#bar2 { opacity: 0; }
+
+span#logo-legend {
+    font: italic bold 1.5em var(--advent-pro);
+    text-transform: capitalize;
+    color: var(--color-e);
+    white-space: nowrap;
+}
+
+nav#main-nav { transition: all 1s linear; }
+
+@keyframes text-height-flow {
+    from { line-height: 0em; }
+
+    to { line-height: 1.5em; }
+}
+
+nav#main-nav > a {
+    font-family: var(--poppins-m);
+    color: var(--color-e);
+    text-decoration: none;
+    animation: text-height-flow 0.5s ease-in;
+}
+
+nav#main-nav > a:active,
+nav#main-nav > a:focus,
+nav#main-nav > a:hover { font-family: var(--poppins-b); }
+
+main {
+    padding-top: 5rem;
+    background-color: var(--color-a);
+}
+
+div#intro-area { height: 80vh; }
+
+div#intro-overlay { height: 60%; }
+
+div#intro-overlay > h1 {
+    font: bold 2.2em var(--advent-pro);
+    color: var(--color-e);
+    text-transform: uppercase;
+}
+
+@keyframes description-appear {
+    0% { scale: 0.4; }
+
+    50% { scale: 1.2; }
+
+    100% { scale: 1; }
+}
+
+div#intro-overlay > p {
+    color: var(--color-c);
+    font: 1.2em var(--poppins-m);
+    animation: description-appear 0.7s ease-in-out;
+}
+
+div#intro-overlay > p > i { font-size: 1.4em; }
+
+p#price { font-family: var(--poppins-b) !important; }
+
+p#price > span:nth-child(2) { font-size: 1.8em; }
+
+@keyframes scale-moving {
+    0% { scale: 1; }
+
+    25% { scale: 1.01; }
+
+    50% { scale: 1.02; }
+
+    75% { scale: 1.03; }
+
+    100% { scale: 1.04; }
+}
+
+button.CTA {
+    width: 90%;
+    padding: 0.4rem 1rem;
+    border: 2px solid var(--color-b);
+    background-color: var(--color-b);
+    border-radius: 1rem;
+    color: var(--color-e);
+    font-family: var(--poppins-b);
+    box-shadow: 0 0 100px var(--color-b);
+    position: sticky;
+    z-index: 0;
+    animation: scale-moving 0.8s linear infinite alternate;
+    transition: all 0.5s linear;
+}
+
+button.CTA:hover,
+button.CTA:active,
+button.CTA:focus {
+    animation: none;
+    box-shadow: 0 0 20px var(--color-b);
+    background-color: transparent;
+    text-shadow: 0 0 10px var(--color-e);
+    border-width: 4px;
+    scale: 1;
+}
+
+button.CTA > i {
+    font-size: 1.3em;
+    margin-right: 5px;
+}
+
+button.CTA > span { font-size: 1.2em; }
+
+.title {
+    font-family: var(--advent-pro);
+    color: var(--color-e);
+    font-size: 2.2em;
+    text-shadow: 0 0 3px var(--color-e);
+    font-weight: bold;
+    margin: 1rem 0rem;
+}
+
+@keyframes bg-moving {
+    0% { background-position: left; }
+
+    50% { background-position: center; }
+
+    100% { background-position: right; }
+}
+
+#valuation-overlay {
+    background: url('../images/filosofia.jpg') no-repeat center fixed;
+    background-size: cover;
+    animation: bg-moving 5s linear infinite alternate;
+}
+
+#valuation-container { background-color: #524d5cb3; }
+
+#valuation-container > p {
+    color: var(--color-e);
+    font: italic 1.1em var(--poppins-m);
+}
+
+@keyframes ytrans {
+    0% { transform: translateX(-30%) }
+
+    50% { transform: translateX(-5%); }
+
+    100% { transform: none; }
+}
+
+.module > h3 > span:first-child {
+    font: 2em var(--poppins-b);
+    color: var(--color-c);
+    animation: ytrans 0.8s ease-in;
+    animation-timeline: view();
+    animation-range: cover 0% cover 30%;
+}
+
+@keyframes lt-space-move {
+    0% { letter-spacing: 1.5rem; }
+
+    50% { letter-spacing: 0.5rem; }
+
+    100% { letter-spacing: 0rem; }
+}
+
+.module > h3 > span:last-child {
+    color: var(--color-b);
+    font: 0.9em var(--poppins-r);
+    animation: lt-space-move 0.8s ease-in;
+    animation-timeline: view();
+    animation-range: cover 0% cover 30%;
+}
+
+@keyframes xytrans {
+    from { transform: translate(-2rem, 1.5rem); }
+
+    to { transform: none; }
+}
+
+.module > p {
+    font-family: var(--poppins-m);
+    color: var(--color-e);
+    animation: xytrans 0.8s ease-in;
+    animation-timeline: view();
+    animation-range: cover 0% cover 30%;
+}
+
+#bonus-area { padding: 0.5rem 1.2rem; }
+
+@keyframes card-scale-moving {
+    0%, 25% { scale: 0.8; }
+
+    50% { scale: 1; }
+
+    75% { scale: 1.05; }
+
+    100% { scale: 1; }
+}
+
+.bonus {
+    background-color: var(--color-d);
+    border-radius: 1.5rem;
+    margin: 3rem 1rem;
+    box-shadow: 0 0 30px var(--color-d);
+    height: 25rem;
+    animation: card-scale-moving 0.8s ease-in;
+    animation-timeline: view();
+    animation-range: cover 0% cover 30%;
+}
+
+.bonus > p:first-child {
+    font-size: 2em;
+    color: var(--color-c);
+}
+
+.bonus > h3 {
+    font: bold 1.8em var(--advent-pro);
+    color: var(--color-b);
+}
+
+.bonus > p:last-child {
+    font-family: var(--poppins-m);
+    color: var(--color-e);
+}
+
+.carousel-indicators { z-index: 1; }
+
+.carousel-indicators [data-bs-target] {
+    border-radius: 50%;
+    background-color: var(--color-d);
+    width: 15px;
+    height: 15px;
+}
+
+.carousel-item {
+    padding: 1rem;
+    z-index: 0;
+}
+
+.testmony-card {
+    background-color: var(--color-b);
+    border-radius: 1rem;
+}
+
+.testmony-card > header > img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.testmony-card > header > h5 {
+    font: 1.1em var(--poppins-b);
+    color: var(--color-a);
+    margin-bottom: 0px;
+}
+
+.testmony-body {
+    color: var(--color-e);
+    font: italic var(--poppins-r);
+}
+
+#FAQ { padding: 2rem 0rem 4rem 0rem; }
+
+#FAQ-accordion {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    z-index: 0;
+}
+
+.accordion-item {
+    border-radius: 0px !important;
+    border: none !important;
+    background-color: var(--color-e);
+    position: sticky;
+    z-index: 0;
+}
+
+.accordion-header { background-color: var(--color-d); }
+
+.accordion-button,
+.accordion-button:hover {
+    font-family: var(--poppins-b);
+    color: var(--color-e) !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.accordion-button:active,
+.accordion-button:focus {
+    background-color: transparent !important;
+    box-shadow: none;
+    border: none !important;
+    color: var(--color-e) !important;
+}
+
+.accordion-button::after {
+    background-image: none !important;
+    content: '\F282';
+    color: var(--color-e);
+    font: 1.3em bootstrap-icons !important;
+}
+
+.accordion-body {
+    color: var(--color-c);
+    border-top: none !important;
+    font: italic var(--poppins-r);
+}
+
+#whatsapp-chat {
+    background-color: #02ff24e6;
+    border: none;
+    padding: 0.5rem 1rem;
+    position: fixed;
+    bottom: 15%;
+    left: 3%;
+    border-radius: 10rem;
+    box-shadow: 0 0 30px var(--color-a);
+    z-index: 1;
+}
+
+#whatsapp-chat.closed { display: none !important; }
+
+#whatsapp-chat.opened { display: flex !important; }
+
+#whatsapp-chat > span:first-child {
+    font-size: 1.5em;
+    color: var(--color-e);
+    margin-right: 10px;
+}
+
+#whatsapp-chat > span:last-child {
+    font-size: 1.1em;
+    color: var(--color-e);
+    font-family: var(--poppins-m);
+}
+
+footer { background-color: var(--color-c); }
+
+footer > p {
+    text-align: center;
+    color: var(--color-e);
+    font-family: var(--poppins-m);
+}
+
+/* Tablet version */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    section#bar1 { transform: translateY(-6px); }
+
+    section#bar3 { transform: translateY(6px); }
+
+    section.bar {
+        height: 7px;
+        width: 50px;
+    }
+
+    span#logo-legend { font-size: 2.5em; }
+
+    nav#main-nav > a { font-size: 1.5em; }
+
+    div#intro-overlay {
+        align-items: start !important;
+        padding: 2rem !important;
+        justify-content: space-evenly !important;
+        height: 100%;
+    }
+
+    div#intro-overlay > h1 {
+        font-size: 3em;
+        text-align: left !important;
+    }
+
+    div#intro-overlay > p {
+        width: 90%;
+        text-align: left !important;
+        font-size: 1.7em;
+    }
+
+    div#intro-overlay > a { text-align: left !important; }
+
+    button.CTA > i { font-size: 1.8em; }
+
+    button.CTA > span { font-size: 1.6em; }
+
+    .title { font-size: 2.8em; }
+
+    #valuation-container > p {
+        width: 90%;
+        font-size: 1.5em;
+    }
+
+    #valuation-container > a > button { width: 50%; }
+
+    .module > h3 { text-align: center; }
+
+    @keyframes lt-space-move-md {
+        0% {
+            letter-spacing: 1.5rem;
+            opacity: 0.1;
+        }
+
+        50% {
+            letter-spacing: 0.5rem;
+            opacity: 0.5;
+        }
+
+        100% {
+            letter-spacing: 0rem;
+            opacity: 1;
+        }
+    }
+
+    .module > h3 > span:first-child {
+        font-size: 2.2em;
+        animation: lt-space-move-md 0.8s ease-in;
+        animation-timeline: view();
+        animation-range: cover 0% cover 30%;
+    }
+
+    .module > h3 > span:last-child { font-size: 1.1em; }
+
+    .module > p {
+        font-size: 1.5em;
+        width: 90%;
+        text-align: center;
+        animation: lt-space-move-md 0.8s ease-in;
+        animation-timeline: view();
+        animation-range: cover 0% cover 30%;
+    }
+
+    #product-details button { width: 60%; }
+
+    .bonus {
+        margin: 2rem 1rem;
+        width: auto;
+        height: auto;
+    }
+
+    .bonus > h3 { font-size: 2.6em; }
+
+    .bonus > p:first-child {
+        font-size: 2.8em;
+        text-align: center;
+    }
+
+    .bonus > p:last-child {
+        text-align: center;
+        width: 90%;
+        font-size: 1.4em;
+    }
+
+    .testmony-card > header > img {
+        width: 4.5rem;
+        height: 4.5rem;
+        margin-right: 15px;
+    }
+
+    .testmony-card > header > h5 { font-size: 1.5em; }
+
+    .testmony-body { font-size: 1.4em; }
+
+    .accordion-button, .accordion-button:hover { font-size: 0.9em; }
+
+    .accordion-button::after {
+        font-size: 1.4em;
+        padding-bottom: 2.5rem;
+        margin-right: 1rem;
+    }
+
+    .accordion-body { font-size: 1.4em; }
+
+    #whatsapp-chat { bottom: 10%; }
+
+    #whatsapp-chat > span:first-child { font-size: 1.9em; }
+
+    #whatsapp-chat > span:last-child { font-size: 1.5em; }
+
+    footer > p { font-size: 1.4em; }
+}
+
+/* Notebook version */
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    #main-header {
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-around;
+    }
+
+    #logo-legend { cursor: pointer; }
+
+    #logo-legend::selection { color: var(--color-b) !important; }
+
+    #main-nav {
+        display: flex !important;
+        flex-direction: row !important;
+        width: auto !important;
+    }
+
+    #main-nav > a::selection { background-color: var(--color-b); }
+
+    #intro-area {
+        background: url('../images/bgdropmasterclass.jpg') no-repeat center;
+        background-size: cover;
+    }
+
+    div#intro-overlay {
+        height: 100%;
+        justify-content: space-evenly !important;
+        align-items: start !important;
+        padding: 2rem !important;
+    }
+
+    div#intro-overlay > h1 {
+        font-size: 2.8em;
+        text-align: left !important;
+    }
+
+    div#intro-overlay > h1::selection { background-color: var(--color-b); }
+
+    div#intro-overlay > p {
+        width: 70% !important;
+        text-align: left !important;
+        font-size: 1.5em;
+    }
+
+    div#intro-overlay > p::selection,
+    div#intro-overlay > p > span::selection { background-color: var(--color-d); }
+
+    div#intro-overlay > a { text-align: left !important; }
+
+    #intro-overlay > a > button { width: 40% !important; }
+
+    button.CTA { width: 30% !important; }
+
+    button.CTA > i { font-size: 1.6em; }
+
+    button.CTA > span { font-size: 1.4em; }
+
+    button.CTA::selection,
+    button.CTA > span::selection { background-color: var(--color-c); }
+
+    .title { font-size: 2.5em; }
+
+    .title::selection { background-color: var(--color-b); }
+
+    #valuation-overlay {
+        animation: none;
+        background-position: center;
+    }
+
+    #valuation-container > p {
+        width: 50%;
+        word-spacing: 3px;
+    }
+
+    #valuation-container > p::selection,
+    .module > p::selection,
+    .bonus > p::selection { background-color: var(--color-c); }
+
+    .module > h3 { text-align: center; }
+
+    @keyframes lt-space-move-md {
+        0% {
+            letter-spacing: 1.5rem;
+            opacity: 0.1;
+        }
+
+        50% {
+            letter-spacing: 0.5rem;
+            opacity: 0.5;
+        }
+
+        100% {
+            letter-spacing: 0rem;
+            opacity: 1;
+        }
+    }
+
+    .module > h3 > span:first-child {
+        animation: lt-space-move-md 0.8s ease-in;
+        animation-timeline: view();
+        animation-range: cover 0% cover 30%;
+    }
+
+    .module > h3 > span::selection { background-color: var(--color-d); }
+
+    .module > p {
+        font-size: 1.3em;
+        width: 70%;
+        text-align: center;
+        animation: lt-space-move-md 0.8s ease-in;
+        animation-timeline: view();
+        animation-range: cover 0% cover 30%;
+    }
+
+    .bonus { height: 22rem; }
+
+    .bonus > h3::selection { background-color: var(--color-a); }
+
+    #testmonies-carousel { width: 80%; }
+
+    .testmony-card {
+        animation: card-scale-moving 0.8s ease-in;
+        animation-timeline: view();
+        animation-range: cover 0% cover 30%;
+    }
+
+    header > h5::selection { background-color: var(--color-c); }
+
+    header > img::selection { background-color: var(--color-d); }
+
+    .testmony-body::selection { background-color: var(--color-c); }
+
+    #FAQ-accordion { width: 80%; }
+
+    .accordion-button::selection { background-color: var(--color-b); }
+
+    .accordion-body {
+        width: 80%;
+        font-style: normal;
+    }
+
+    .accordion-body::selection { background-color: var(--color-a); }
+
+    #whatsapp-chat > span:last-child::selection { background-color: var(--color-d); }
+
+    footer > p > span::selection,
+    footer > p > span > strong::selection { background-color: var(--color-b) !important; }
+}
+
+/* TV Version */
+@media screen and (min-width: 1200px) {
+    #main-header {
+        flex-direction: row !important;
+        align-items: center !important;
+    }
+
+    #logo-legend { cursor: pointer; }
+
+    #logo-legend::selection { color: var(--color-b) !important; }
+
+    #main-nav {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center;
+    }
+
+    #main-nav > a::selection { background-color: var(--color-b); }
+
+    #intro-area {
+        background: url('../images/bgdropmasterclass.jpg') no-repeat center;
+        background-size: cover;
+    }
+
+    div#intro-overlay {
+        height: 100%;
+        justify-content: space-evenly !important;
+        align-items: start !important;
+        padding: 2rem !important;
+    }
+
+    div#intro-overlay > h1 {
+        font-size: 2.8em;
+        text-align: left !important;
+    }
+
+    div#intro-overlay > h1::selection { background-color: var(--color-b); }
+
+    div#intro-overlay > p {
+        width: 60% !important;
+        text-align: left !important;
+        font-size: 1.5em;
+    }
+
+    div#intro-overlay > p::selection,
+    div#intro-overlay > p > span::selection { background-color: var(--color-d); }
+
+    div#intro-overlay > a { text-align: left !important; }
+
+    #intro-overlay > a > button { width: 40% !important; }
+
+    button.CTA { width: 30% !important; }
+
+    button.CTA > i { font-size: 1.6em; }
+
+    button.CTA > span { font-size: 1.4em; }
+
+    button.CTA::selection,
+    button.CTA > span::selection { background-color: var(--color-c); }
+
+    .title { font-size: 2.5em; }
+
+    .title::selection { background-color: var(--color-b); }
+
+    #valuation-overlay {
+        animation: none;
+        background-position: center;
+    }
+
+    #valuation-container > p {
+        width: 50%;
+        word-spacing: 3px;
+    }
+
+    #valuation-container > p::selection,
+    .module > p::selection,
+    .bonus > p::selection { background-color: var(--color-c); }
+
+    .module > h3 { text-align: center; }
+
+    @keyframes lt-space-move-md {
+        0% {
+            letter-spacing: 1.5rem;
+            opacity: 0.1;
+        }
+
+        50% {
+            letter-spacing: 0.5rem;
+            opacity: 0.5;
+        }
+
+        100% {
+            letter-spacing: 0rem;
+            opacity: 1;
+        }
+    }
+
+    .module > h3 > span:first-child {
+        animation: lt-space-move-md 0.8s ease-in;
+        animation-timeline: view();
+        animation-range: cover 0% cover 30%;
+    }
+
+    .module > h3 > span::selection { background-color: var(--color-d); }
+
+    .module > p {
+        font-size: 1.3em;
+        width: 70%;
+        text-align: center;
+        animation: lt-space-move-md 0.8s ease-in;
+        animation-timeline: view();
+        animation-range: cover 0% cover 30%;
+    }
+
+    .bonus {
+        width: 25rem;
+        height: 22rem;
+    }
+
+    .bonus > h3::selection { background-color: var(--color-a); }
+
+    #testmonies-carousel { width: 80%; }
+
+    .testmony-card {
+        animation: card-scale-moving 0.8s ease-in;
+        animation-timeline: view();
+        animation-range: cover 0% cover 30%;
+    }
+
+    header > h5::selection { background-color: var(--color-c); }
+
+    header > img::selection { background-color: var(--color-d); }
+
+    .testmony-body::selection { background-color: var(--color-c); }
+
+    #FAQ-accordion { width: 80%; }
+
+    .accordion-button::selection { background-color: var(--color-b); }
+
+    .accordion-body {
+        width: 80%;
+        font-style: normal;
+    }
+
+    .accordion-body::selection { background-color: var(--color-a); }
+
+    #whatsapp-chat > span:last-child::selection { background-color: var(--color-d); }
+
+    footer > p > span::selection,
+    footer > p > span > strong::selection { background-color: var(--color-b) !important; }
+}

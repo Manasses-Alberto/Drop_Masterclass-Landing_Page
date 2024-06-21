@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop Masterclass</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    <header id="main-header" class="w-100 position-fixed top-0 d-flex flex-column align-items-start justify-content-left closed-menu">
+        <div class="header-main-area p-2 d-flex align-items-center justify-content-center gap-2">
+            <button type="button" id="menu-controller-btn" class="d-lg-none">
+                <section id="bar1" class="bar d-block"></section>
+                <section id="bar2" class="bar d-block"></section>
+                <section id="bar3" class="bar d-block"></section>
+            </button>
+            <span id="logo-legend">Drop Masterclass</span>
+        </div>
+        <nav id="main-nav" class="w-100 p-4 p-lg-2 d-none flex-column align-items-start justify-content-left gap-3">
+            <a href="checkout.html">Get training</a>
+            <a href="#product-bonus">Bonus</a>
+            <a href="#product-testmonies">Testimonies</a>
+            <a href="#FAQ">Frequently questions</a>
+            <a href="web.whatsapp.com">Support</a>
+        </nav>
+    </header>
+    <main>
+        <div id="intro-area">
+            <div id="intro-overlay" class="p-3 d-flex flex-column align-items-center justify-content-between">
+                <h1 class="typing-effect text-center" data-text="Lorem ipsum dolor sit amet"></h1>
+                <p class="text-center w-100">
+                    <i class="bi bi-quote"></i>
+                    <span>Aprenda a criar e a faturar com a sua loja online em poucos dias de forma simples com os maiores especialistas do mercado!</span>
+                </p>
+                <p id="price" class="text-center w-100">
+                    <span class="d-block">Por apenas</span>
+                    <span>540.99</span>
+                    <span>US$</span>
+                </p>
+                <a href="#" class="w-100 d-inline text-center">
+                    <button type="button" class="CTA">
+                        <i class="bi bi-rocket-takeoff-fill"></i>
+                        <span>Get training now!</span>
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div id="valuation-overlay">
+            <div id="valuation-container" class="p-3 d-flex align-items-center justify-content-between flex-column">
+                <h2 class="title text-center">Why learn drop?</h2>
+                <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ea, eum, consequuntur soluta voluptatibus magni, nisi pariatur consequatur mollitia facere doloribus labore quia beatae suscipit laborum molestiae est. Quas, explicabo?</p>
+                <a class="w-100 d-inline text-center">
+                    <button type="button" class="CTA my-4">
+                        <i class="bi bi-rocket-takeoff-fill"></i>
+                        <span>Get training now!</span>
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div id="product-details" class="p-3 d-md-flex flex-md-column align-items-center">
+            <h2 class="title text-center">Módulos do curso</h2>
+            <div id="modules-area">
+                <div class="module position-sticky d-md-flex flex-md-column align-items-center">
+                    <h3 class="mb-md-4">
+                        <span class="d-block">01</span>
+                        <span>Iniciante</span>
+                    </h3>
+                    <p class="mb-md-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum atque tenetur quaerat possimus repellat adipisci dignissimos dolores.</p>
+                </div>
+                <div class="module position-sticky d-md-flex flex-md-column align-items-center">
+                    <h3 class="mb-md-4">
+                        <span class="d-block">02</span>
+                        <span>Intermediário</span>
+                    </h3>
+                    <p class="mb-md-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum atque tenetur quaerat possimus repellat adipisci dignissimos dolores.</p>
+                </div>
+                <div class="module position-sticky d-md-flex flex-md-column align-items-center">
+                    <h3 class="mb-md-4">
+                        <span class="d-block">03</span>
+                        <span>Avançado</span>
+                    </h3>
+                    <p class="mb-md-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum atque tenetur quaerat possimus repellat adipisci dignissimos dolores.</p>
+                </div>
+            </div>
+            <div class="action-area d-md-flex justify-content-center w-100">
+                <a class="w-100 d-inline text-center">
+                    <button type="button" class="CTA my-4">
+                        <i class="bi bi-rocket-takeoff-fill"></i>
+                        <span>Get training now!</span>
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div id="product-bonus" class="mb-4">
+            <h2 class="text-center title">Bónus</h2>
+            <div id="bonus-area" class="d-lg-flex align-items-start justify-content-around">
+                <div class="bonus p-3 d-flex flex-column align-items-center justify-content-between">
+                    <p><i class="bi bi-people-fill"></i></p>
+                    <h3>Comunidade exclusiva</h3>
+                    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repudiandae voluptates recusandae excepturi, ducimus eligendi earum, dicta voluptate explicabo iste provident sed quisquam laboriosam nostrum velit, saepe architecto impedit dolores!</p>
+                </div>
+                <div class="bonus p-3 d-flex flex-column align-items-center justify-content-between">
+                    <p><i class="bi bi-box2-heart-fill"></i></p>
+                    <h3>Materiais extra</h3>
+                    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repudiandae voluptates recusandae excepturi, ducimus eligendi earum, dicta voluptate explicabo iste provident sed quisquam laboriosam nostrum velit, saepe architecto impedit dolores!</p>
+                </div>
+                <div class="bonus p-3 d-flex flex-column align-items-center justify-content-between">
+                    <p><i class="bi bi-coin"></i></p>
+                    <h3>Ivestimento em tráfego</h3>
+                    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repudiandae voluptates recusandae excepturi, ducimus eligendi earum, dicta voluptate explicabo iste provident sed quisquam laboriosam nostrum velit, saepe architecto impedit dolores!</p>
+                </div>
+            </div>
+            <div class="action-area px-3 d-flex justify-content-center">
+                <a class="w-100 d-inline text-center">
+                    <button type="button" class="CTA my-4">
+                        <i class="bi bi-rocket-takeoff-fill"></i>
+                        <span>Get training now!</span>
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div id="product-testmonies" class="d-lg-flex flex-column align-items-center">
+            <h2 class="title text-center">Depoimentos</h2>
+            <div id="testmonies-carousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#testmonies-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#testmonies-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#testmonies-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner w-100 d-lg-flex align-items-start justify-content-around gap-4">
+                    <div class="carousel-item active">
+                        <div class="testmony-card p-3">
+                            <header class="d-flex align-items-center justify-content-left mb-4">
+                                <img src="../static/images/woman.jpg" alt="Yha">
+                                <h5>Ed Sheeran</h5>
+                            </header>
+                            <p class="testmony-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio magnam tenetur provident dolorum voluptatum, explicabo amet? At enim deleniti animi minus non, et asperiores! Consequuntur aliquam voluptates quae alias obcaecati.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testmony-card p-3">
+                            <header class="d-flex align-items-center justify-content-left mb-4">
+                                <img src="../static/images/woman.jpg" alt="Yha">
+                                <h5>Justin Bieber</h5>
+                            </header>
+                            <p class="testmony-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio magnam tenetur provident dolorum voluptatum, explicabo amet? At enim deleniti animi minus non, et asperiores! Consequuntur aliquam voluptates quae alias obcaecati.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testmony-card p-3">
+                            <header class="d-flex align-items-center justify-content-left mb-4">
+                                <img src="../static/images/woman.jpg" alt="Yha">
+                                <h5>Shawn Mendes</h5>
+                            </header>
+                            <p class="testmony-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio magnam tenetur provident dolorum voluptatum, explicabo amet? At enim deleniti animi minus non, et asperiores! Consequuntur aliquam voluptates quae alias obcaecati.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="FAQ" class="d-lg-flex flex-column align-items-center">
+            <h2 class="title text-center">Frequently questions</h2>
+            <div class="accordion" id="FAQ-accordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#answer-collapse-one" aria-expanded="true" aria-controls="answer-collapse-one">
+                            Lorem ipsum dolor sit amet?
+                        </button>
+                    </h2>
+                    <div id="answer-collapse-one" class="accordion-collapse collapse show" data-bs-parent="#FAQ-accordion">
+                        <div class="accordion-body">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus alias dolores, et vel natus quasi ut? Asperiores eius eum adipisci incidunt placeat, eaque, ducimus, rem optio odit nesciunt qui architecto!
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer-collapse-two" aria-expanded="false" aria-controls="answer-collapse-two">
+                            Lorem ipsum dolor sit amet?
+                        </button>
+                    </h2>
+                    <div id="answer-collapse-two" class="accordion-collapse collapse" data-bs-parent="#FAQ-accordion">
+                        <div class="accordion-body">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus alias dolores, et vel natus quasi ut? Asperiores eius eum adipisci incidunt placeat, eaque, ducimus, rem optio odit nesciunt qui architecto!
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer-collapse-three" aria-expanded="false" aria-controls="answer-collapse-three">
+                            Lorem ipsum dolor sit amet?
+                        </button>
+                    </h2>
+                    <div id="answer-collapse-three" class="accordion-collapse collapse" data-bs-parent="#FAQ-accordion">
+                        <div class="accordion-body">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus alias dolores, et vel natus quasi ut? Asperiores eius eum adipisci incidunt placeat, eaque, ducimus, rem optio odit nesciunt qui architecto!
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer-collapse-four" aria-expanded="false" aria-controls="answer-collapse-four">
+                            Lorem ipsum dolor sit amet?
+                        </button>
+                    </h2>
+                    <div id="answer-collapse-four" class="accordion-collapse collapse" data-bs-parent="#FAQ-accordion">
+                        <div class="accordion-body">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus alias dolores, et vel natus quasi ut? Asperiores eius eum adipisci incidunt placeat, eaque, ducimus, rem optio odit nesciunt qui architecto!
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer-collapse-five" aria-expanded="false" aria-controls="answer-collapse-five">
+                            Lorem ipsum dolor sit amet?
+                        </button>
+                    </h2>
+                    <div id="answer-collapse-five" class="accordion-collapse collapse" data-bs-parent="#FAQ-accordion">
+                        <div class="accordion-body">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus alias dolores, et vel natus quasi ut? Asperiores eius eum adipisci incidunt placeat, eaque, ducimus, rem optio odit nesciunt qui architecto!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button id="whatsapp-chat" class="closed d-flex align-items-center">
+            <span>
+                <i class="bi bi-whatsapp"></i>
+            </span>
+            <span>Posso ajudar?</span>
+        </button>
+    </main>
+    <footer class="px-2 pt-4 pb-2">
+        <p>
+            <span>Copyright &copy; 2024</span>
+            <br>
+            <span><strong>Manassés Ndombele</strong> Dev & Copywritter freelancer</span>
+        </p>
+    </footer>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+</html>
