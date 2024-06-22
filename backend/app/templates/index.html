@@ -3,10 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Manassés Ndombele, Dev Freelancer">
+    <meta name="description" content="This is a sample landing page example that is part of my freelance portfolio and to showcase my work as a fullstack web developer. View my full portfolio here!">
+    <meta name="keywords" content="developer, freelancer, developer freelancer, web developer, fullstack developer, portfolio freelancer, landing page, landing page example">
     <title>Drop Masterclass</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/client.ico') }}" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,700;1,700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.min.css') }}">
 </head>
 <body>
     <header id="main-header" class="w-100 position-fixed top-0 d-flex flex-column align-items-start justify-content-left closed-menu">
@@ -19,24 +26,24 @@
             <span id="logo-legend">Drop Masterclass</span>
         </div>
         <nav id="main-nav" class="w-100 p-4 p-lg-2 d-none flex-column align-items-start justify-content-left gap-3">
-            <a href="checkout.html">Get training</a>
+            <a href="{{ url_for('checkout') }}">Get training</a>
             <a href="#product-bonus">Bonus</a>
             <a href="#product-testmonies">Testimonies</a>
             <a href="#FAQ">Frequently questions</a>
-            <a href="web.whatsapp.com">Support</a>
+            <a href="#">Support</a>
         </nav>
     </header>
     <main>
         <div id="intro-area">
             <div id="intro-overlay" class="p-3 d-flex flex-column align-items-center justify-content-between">
-                <h1 class="typing-effect text-center" data-text="Lorem ipsum dolor sit amet"></h1>
+                <h1 class="typing-effect text-center" data-text="START MAKING MONEY TODAY WITH ONLINE STORES WITHOUT INVENTORY"></h1>
                 <p class="text-center w-100">
                     <i class="bi bi-quote"></i>
-                    <span>Aprenda a criar e a faturar com a sua loja online em poucos dias de forma simples com os maiores especialistas do mercado!</span>
+                    <span>Learn how to create and profit from your online store in just a few days easily with the top experts in the market!</span>
                 </p>
                 <p id="price" class="text-center w-100">
-                    <span class="d-block">Por apenas</span>
-                    <span>540.99</span>
+                    <span class="d-block">Only for</span>
+                    <span>54.99</span>
                     <span>US$</span>
                 </p>
                 <a href="#" class="w-100 d-inline text-center">
@@ -49,8 +56,8 @@
         </div>
         <div id="valuation-overlay">
             <div id="valuation-container" class="p-3 d-flex align-items-center justify-content-between flex-column">
-                <h2 class="title text-center">Why learn drop?</h2>
-                <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ea, eum, consequuntur soluta voluptatibus magni, nisi pariatur consequatur mollitia facere doloribus labore quia beatae suscipit laborum molestiae est. Quas, explicabo?</p>
+                <h2 class="title text-center">Why learn dropshipping?</h2>
+                <p class="text-center">Learning dropshipping provides financial freedom and stability to everyone who does it correctly with the right strategies, as the e-commerce market is a trillion-dollar industry that keeps growing.</p>
                 <a class="w-100 d-inline text-center">
                     <button type="button" class="CTA my-4">
                         <i class="bi bi-rocket-takeoff-fill"></i>
@@ -60,28 +67,28 @@
             </div>
         </div>
         <div id="product-details" class="p-3 d-md-flex flex-md-column align-items-center">
-            <h2 class="title text-center">Módulos do curso</h2>
+            <h2 class="title text-center">Course modules</h2>
             <div id="modules-area">
                 <div class="module position-sticky d-md-flex flex-md-column align-items-center">
                     <h3 class="mb-md-4">
                         <span class="d-block">01</span>
-                        <span>Iniciante</span>
+                        <span>Beginner</span>
                     </h3>
-                    <p class="mb-md-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum atque tenetur quaerat possimus repellat adipisci dignissimos dolores.</p>
+                    <p class="mb-md-4">Here you will learn how to create your own online store the right way; you will learn which niches are the most profitable as well as where to create your online store.</p>
                 </div>
                 <div class="module position-sticky d-md-flex flex-md-column align-items-center">
                     <h3 class="mb-md-4">
                         <span class="d-block">02</span>
-                        <span>Intermediário</span>
+                        <span>Intermediate</span>
                     </h3>
-                    <p class="mb-md-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum atque tenetur quaerat possimus repellat adipisci dignissimos dolores.</p>
+                    <p class="mb-md-4">Here you will learn about finding the best dropshipping suppliers in any niche and about strategies to generate traffic to your store using paid traffic on Google Ads and Facebook Ads.</p>
                 </div>
                 <div class="module position-sticky d-md-flex flex-md-column align-items-center">
                     <h3 class="mb-md-4">
                         <span class="d-block">03</span>
-                        <span>Avançado</span>
+                        <span>Advanced</span>
                     </h3>
-                    <p class="mb-md-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum atque tenetur quaerat possimus repellat adipisci dignissimos dolores.</p>
+                    <p class="mb-md-4">Here you will learn about bringing much more traffic with innovative organic traffic strategies and about efficiently managing your store financially.</p>
                 </div>
             </div>
             <div class="action-area d-md-flex justify-content-center w-100">
@@ -94,22 +101,22 @@
             </div>
         </div>
         <div id="product-bonus" class="mb-4">
-            <h2 class="text-center title">Bónus</h2>
-            <div id="bonus-area" class="d-lg-flex align-items-start justify-content-around">
-                <div class="bonus p-3 d-flex flex-column align-items-center justify-content-between">
+            <h2 class="text-center title">Bonus</h2>
+            <div id="bonus-area" class="d-lg-flex align-items-start justify-content-between">
+                <div class="bonus p-3 d-flex flex-column align-items-center justify-content-left">
                     <p><i class="bi bi-people-fill"></i></p>
-                    <h3>Comunidade exclusiva</h3>
-                    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repudiandae voluptates recusandae excepturi, ducimus eligendi earum, dicta voluptate explicabo iste provident sed quisquam laboriosam nostrum velit, saepe architecto impedit dolores!</p>
+                    <h3>Exclusive community</h3>
+                    <p class="text-center">Join our vibrant community of learners. Here, you'll not only learn from top market experts, but also have the opportunity to connect and collaborate with other entrepreneurs like yourself</p>
                 </div>
-                <div class="bonus p-3 d-flex flex-column align-items-center justify-content-between">
+                <div class="bonus p-3 d-flex flex-column align-items-center justify-content-left">
                     <p><i class="bi bi-box2-heart-fill"></i></p>
-                    <h3>Materiais extra</h3>
-                    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repudiandae voluptates recusandae excepturi, ducimus eligendi earum, dicta voluptate explicabo iste provident sed quisquam laboriosam nostrum velit, saepe architecto impedit dolores!</p>
+                    <h3>Extra materials</h3>
+                    <p class="text-center">In addition to the course, we offer exclusive access to ebooks and supplementary materials to enhance your dropshipping learning experience. From advanced marketing strategies to practical tips, these extra resources maximize your success. Make the most of this advantage!</p>
                 </div>
-                <div class="bonus p-3 d-flex flex-column align-items-center justify-content-between">
+                <div class="bonus p-3 d-flex flex-column align-items-center justify-content-left">
                     <p><i class="bi bi-coin"></i></p>
-                    <h3>Ivestimento em tráfego</h3>
-                    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repudiandae voluptates recusandae excepturi, ducimus eligendi earum, dicta voluptate explicabo iste provident sed quisquam laboriosam nostrum velit, saepe architecto impedit dolores!</p>
+                    <h3>Investment in traffic</h3>
+                    <p class="text-center">For the first 50 students, we offer a special bonus of $300 for traffic investment. Seize this unique opportunity to boost your business growth and achieve quick results in the world of dropshipping. Secure your spot now!</p>
                 </div>
             </div>
             <div class="action-area px-3 d-flex justify-content-center">
@@ -122,7 +129,7 @@
             </div>
         </div>
         <div id="product-testmonies" class="d-lg-flex flex-column align-items-center">
-            <h2 class="title text-center">Depoimentos</h2>
+            <h2 class="title text-center mb-lg-4">What do people say about Drop Masterclass?</h2>
             <div id="testmonies-carousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#testmonies-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -134,92 +141,92 @@
                         <div class="testmony-card p-3">
                             <header class="d-flex align-items-center justify-content-left mb-4">
                                 <img src="../static/images/woman.jpg" alt="Yha">
-                                <h5>Ed Sheeran</h5>
+                                <h5>Ed Bieber</h5>
                             </header>
-                            <p class="testmony-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio magnam tenetur provident dolorum voluptatum, explicabo amet? At enim deleniti animi minus non, et asperiores! Consequuntur aliquam voluptates quae alias obcaecati.</p>
+                            <p class="testmony-body">I am extremely satisfied with the dropshipping course I purchased. From the first module, I was impressed by the depth of the content and the clarity of the explanations. The instructors are true experts, and their passion for the subject is evident in every class.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="testmony-card p-3">
                             <header class="d-flex align-items-center justify-content-left mb-4">
                                 <img src="../static/images/woman.jpg" alt="Yha">
-                                <h5>Justin Bieber</h5>
+                                <h5>Justin Mendes</h5>
                             </header>
-                            <p class="testmony-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio magnam tenetur provident dolorum voluptatum, explicabo amet? At enim deleniti animi minus non, et asperiores! Consequuntur aliquam voluptates quae alias obcaecati.</p>
+                            <p class="testmony-body">What surprised me the most was the community of learners. Being able to interact with other students and share experiences has been incredibly enriching. I've already made some valuable connections that I'm sure will last beyond the course.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="testmony-card p-3">
                             <header class="d-flex align-items-center justify-content-left mb-4">
                                 <img src="../static/images/woman.jpg" alt="Yha">
-                                <h5>Shawn Mendes</h5>
+                                <h5>Shawn Sheeran</h5>
                             </header>
-                            <p class="testmony-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio magnam tenetur provident dolorum voluptatum, explicabo amet? At enim deleniti animi minus non, et asperiores! Consequuntur aliquam voluptates quae alias obcaecati.</p>
+                            <p class="testmony-body">The extra materials, such as ebooks and practical guides, are a true differentiator. They perfectly complement the lessons and offer additional insights that I wouldn't find anywhere else</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div id="FAQ" class="d-lg-flex flex-column align-items-center">
-            <h2 class="title text-center">Frequently questions</h2>
+            <h2 class="title text-center">Frequently Asked Questions</h2>
             <div class="accordion" id="FAQ-accordion">
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#answer-collapse-one" aria-expanded="true" aria-controls="answer-collapse-one">
-                            Lorem ipsum dolor sit amet?
+                            What is the payment method of training?
                         </button>
                     </h2>
                     <div id="answer-collapse-one" class="accordion-collapse collapse show" data-bs-parent="#FAQ-accordion">
                         <div class="accordion-body">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus alias dolores, et vel natus quasi ut? Asperiores eius eum adipisci incidunt placeat, eaque, ducimus, rem optio odit nesciunt qui architecto!
+                            In our checkout, the direct payment method we accept is Visa Mastercard. You can purchase the course with it or any other Visa card.
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer-collapse-two" aria-expanded="false" aria-controls="answer-collapse-two">
-                            Lorem ipsum dolor sit amet?
+                            How long will the course last?
                         </button>
                     </h2>
                     <div id="answer-collapse-two" class="accordion-collapse collapse" data-bs-parent="#FAQ-accordion">
                         <div class="accordion-body">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus alias dolores, et vel natus quasi ut? Asperiores eius eum adipisci incidunt placeat, eaque, ducimus, rem optio odit nesciunt qui architecto!
+                            The Drop Masterclass training is divided into three modules. The first module has a total duration of 8 hours, the second module has a total duration of 10 hours, and the last module has a duration of 20 hours
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer-collapse-three" aria-expanded="false" aria-controls="answer-collapse-three">
-                            Lorem ipsum dolor sit amet?
+                            Can I get a refund for the course?
                         </button>
                     </h2>
                     <div id="answer-collapse-three" class="accordion-collapse collapse" data-bs-parent="#FAQ-accordion">
                         <div class="accordion-body">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus alias dolores, et vel natus quasi ut? Asperiores eius eum adipisci incidunt placeat, eaque, ducimus, rem optio odit nesciunt qui architecto!
+                            If you liked the course but are not getting the expected results or you are not understanding anything in the course, we will first provide you with closer support. If you continue to be in the same situation, we will refund all your money!
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer-collapse-four" aria-expanded="false" aria-controls="answer-collapse-four">
-                            Lorem ipsum dolor sit amet?
+                            Is there no discount on the course?
                         </button>
                     </h2>
                     <div id="answer-collapse-four" class="accordion-collapse collapse" data-bs-parent="#FAQ-accordion">
                         <div class="accordion-body">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus alias dolores, et vel natus quasi ut? Asperiores eius eum adipisci incidunt placeat, eaque, ducimus, rem optio odit nesciunt qui architecto!
+                            The Drop Masterclass dropshipping training is offering a special discount for women, seniors, and children who want to become millionaires on the internet. This discount is 60% for seniors, 40% for children, 95% for women, and 99% for pregnant women.
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer-collapse-five" aria-expanded="false" aria-controls="answer-collapse-five">
-                            Lorem ipsum dolor sit amet?
+                            Are you seriously not going to hire Manassés?
                         </button>
                     </h2>
                     <div id="answer-collapse-five" class="accordion-collapse collapse" data-bs-parent="#FAQ-accordion">
                         <div class="accordion-body">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus alias dolores, et vel natus quasi ut? Asperiores eius eum adipisci incidunt placeat, eaque, ducimus, rem optio odit nesciunt qui architecto!
+                            Your landing page will be 10 times better than this one! Honestly, because I consider this to be my worst project on my portfolio compared to the other projects like this one here: <a href="borgescompany.herokuapp.com">BORGES Company</a>
                         </div>
                     </div>
                 </div>
@@ -229,17 +236,17 @@
             <span>
                 <i class="bi bi-whatsapp"></i>
             </span>
-            <span>Posso ajudar?</span>
+            <span>May I help you?</span>
         </button>
     </main>
     <footer class="px-2 pt-4 pb-2">
         <p>
             <span>Copyright &copy; 2024</span>
             <br>
-            <span><strong>Manassés Ndombele</strong> Dev & Copywritter freelancer</span>
+            <span><strong>Manassés Ndombele</strong> Dev Freelancer</span>
         </p>
     </footer>
-    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='js/index.min.js') }}"></script>
 </body>
 </html>
